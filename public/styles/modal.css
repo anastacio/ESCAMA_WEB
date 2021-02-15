@@ -1,0 +1,148 @@
+@font-face {
+  src: url(fonts/formular-medium.otf);
+  font-family: "formular-medium";
+}
+
+@font-face {
+  src: url(fonts/formular-bold.otf);
+  font-family: "formular-bold";
+}
+
+@font-face {
+  src: url(fonts/formular-mono.otf);
+  font-family: "formular-mono";
+}
+
+@font-face {
+  src: url(fonts/zigzag.otf);
+  font-family: "zigzag";
+}
+@font-face {
+  src: url(fonts/UnicaOne-Regular.ttf);
+  font-family: "UnicaOne-Regular";
+}
+
+@font-face {
+  src: url(fonts/Patrima-Outline.otf);
+  font-family: "Patrima-Outline";
+}
+
+#modal {
+  background-color: rgba(
+    245,
+    244,
+    240,
+    96%
+  ); /* os ultimos 2 chars sao de transparência*/
+
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 400ms;
+}
+
+#modal.hide {
+  display: none;
+}
+
+#modal .content {
+  font-size: 16px;
+  font-family: "UnicaOne-Regular";
+  color: white;
+
+  width: 620px;
+}
+
+#modal .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 32px;
+}
+
+#modal .header a {
+  background-image: url("../assets/x1.svg");
+  color: black;
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+
+  font-size: 0.01px;
+}
+
+#modal .header h1 {
+  color: black;
+  font-family: "Patrima-Outline";
+  font-size: 30px;
+  padding-left: 10px;
+  line-height: 42px;
+  font-weight: 800;
+}
+
+#modal .header a {
+  color: Black;
+}
+
+#modal form label {
+  font-size: 18px;
+  line-height: 16px;
+
+  display: block;
+  margin-bottom: 8px;
+}
+
+#modal form .field {
+  display: flex;
+}
+
+#modal form input {
+  flex: 1;
+
+  background-color: #f0f0f5;
+
+  border-radius: 8px 0 0 8px;
+  border: 0;
+  width: 130%;
+
+  padding: 10px 0px;
+
+  font-size: 16px;
+  color: #6c6c80;
+}
+
+#modal form button {
+  width: 72px;
+  height: 52px;
+
+  background-color: #5ad2d6;
+
+  border: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+#modal form button:hover {
+  background-color: #31338d;
+}
+
+/* Para o modal point created*/
+
+#modal.point .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#modal.point h1 {
+  color: white;
+
+  margin-top: 32px;
+}

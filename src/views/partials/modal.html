@@ -1,0 +1,56 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet">
+
+
+<div class="hide" id="modal">
+
+    <div class="content">
+        <div class="header">
+            <h1>Encontre modelos de azulejos</br>de acordo com seu estilo e região</h1>
+            <a href="#">Fechar</a>
+        </div>
+        <form action="search">
+            <label for="search"></label>
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="search field">
+                            <select class="mySelect for" id="busca" multiple="multiple" name="search"
+                                style="width: 100%"></select>
+                            <button>
+                                <img alt="Buscar" src="assets/search.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<!-- jQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+
+
+<script>
+
+    var data = ["ODS1 - Erradicação da pobreza", "ODS2 - Fome zero e agricultura sustentável", "ODS3 - Saúde e bem-estar", "ODS4 - Educação de qualidade", "ODS5 - Igualdade de gênero", "ODS6 - Água limpa e saneamento",
+        "ODS7 - Energia limpa e acessível", "ODS8 - Trabalho decente e crescimento econômico", "ODS9 - Inovação infraestrutura", "ODS10 - Redução das desigualdades", "ODS11 - Cidades e comunidades sustentáveis", "ODS12 - Consumo e produção responsáveis",
+        "ODS13 - Ação contra a mudança global do clima", "ODS14 - Vida na água", "ODS15 - Vida terrestre", "ODS16 - Paz, justiça e instituições eficazes", "ODS17 - Parcerias e meios de implementação"]; // Programatically-generated options array with > 5 options
+    var placeholder = "Selecione";
+    $(".mySelect").select2({
+        data: data,
+        placeholder: placeholder,
+        allowClear: false,
+        minimumResultsForSearch: 17,
+    });
+</script>

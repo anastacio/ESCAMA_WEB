@@ -1,0 +1,235 @@
+@font-face {
+  src: url(fonts/formular-medium.otf);
+  font-family: "formular-medium";
+}
+
+@font-face {
+  src: url(fonts/formular-mono.otf);
+  font-family: "formular-mono";
+}
+
+@font-face {
+  src: url(fonts/zigzag.otf);
+  font-family: "zigzag";
+}
+
+@font-face {
+  src: url(fonts/UnicaOne-Regular.ttf);
+  font-family: "UnicaOne-Regular";
+}
+
+@font-face {
+  src: url(fonts/Patrima-Outline.otf);
+  font-family: "Patrima-Outline";
+}
+
+#page-about {
+  width: 90%;
+  max-width: 1100px;
+
+  /*Alinhamento de caixa pelo lado de fora*/
+  margin: 0 auto;
+}
+
+#page-about header {
+  margin-top: 48px;
+  padding-left: 30px;
+  padding-right: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page-about header a {
+  color: #3f496b;
+  font-family: "UnicaOne-Regular";
+  font-size: 30px;
+
+  display: flex;
+  align-items: center;
+}
+
+#page-about header a span {
+  margin-right: 16px;
+  background-image: url("../assets/seta_branca.png");
+  padding-right: 20px;
+  display: flex; /*dentro da mesma div vc coloca o display flex pra fazer flexbox*/
+  width: 10px;
+  height: 22.5px;
+}
+
+#page-about header .voltar {
+  display: none;
+}
+
+.imagine-txt {
+  height: 100px !important;
+}
+
+.observation {
+  color: #6d6d6d;
+  margin-top: 60px;
+}
+
+.create-point-head {
+  padding-top: 40px;
+  padding-left: 30px;
+}
+
+.create-point-head h1 {
+  padding-top: 40px;
+  font-size: 260%;
+  font-family: "Patrima-Outline";
+  color: #3f496b;
+}
+
+.create-point-head h2 {
+  padding-top: 20px;
+  font-size: 135%;
+  font-family: "UnicaOne-Regular";
+  color: #3f496b;
+}
+
+.create-point-head h3 {
+  padding-top: 20px;
+  font-size: 30px;
+  font-family: "UnicaOne-Regular";
+  color: #3f496b;
+}
+
+#results {
+  font-size: 15px;
+  font-family: "UnicaOne-Regular";
+  color: #3f496b;
+  cursor: pointer;
+}
+
+#results-top {
+  font-size: 15px;
+  font-family: "UnicaOne-Regular";
+  color: #342374;
+}
+
+#results .address:hover {
+  color: #342374;
+}
+
+#point-created .check-txt {
+  font-size: 15px;
+  font-family: zigzag;
+  color: #342374;
+}
+
+.telas-app ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.telas-app ul li img {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 75%;
+  height: 65%;
+}
+
+.social {
+  margin-top: 80px;
+  margin-left: 3%;
+  margin-right: 7%;
+
+  color: #8d8d8d;
+}
+
+.social ul {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+
+  list-style-type: none;
+}
+
+.social a {
+  font-size: 12px;
+  font-family: formular-mono !important;
+  color: #8d8d8d;
+}
+
+#insta {
+  padding-top: 3%;
+  width: 20%;
+  height: 46%;
+}
+
+#dgartes {
+  padding-top: 3%;
+  width: 103%;
+  height: 62%;
+}
+
+#gplay {
+  width: 75%;
+  height: 75%;
+}
+
+@media (max-width: 900px) {
+  #page-about header {
+    padding-left: 30px;
+
+    padding-right: 10px;
+  }
+
+  #page-about header a {
+    padding-left: 10px;
+    font-size: 150%;
+    padding-right: 10px;
+  }
+
+  .create-point-head h1 {
+    font-size: 190%;
+  }
+
+  .create-point-head h2 {
+    font-size: 110%;
+  }
+
+  .telas-app ul li {
+    padding: 0px;
+  }
+
+  .telas-app ul li img {
+    width: 85%;
+    height: 75%;
+  }
+
+  #img-tela {
+    display: none;
+  }
+
+  #insta {
+    margin-left: 31%;
+    width: 20%;
+    height: 56%;
+  }
+
+  #dgartes {
+    padding-top: 3%;
+    width: 103%;
+    height: 62%;
+  }
+
+  #gplay {
+    width: 75%;
+    height: 75%;
+  }
+
+  .social ul {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .social ul li {
+    padding-top: 10%;
+  }
+}

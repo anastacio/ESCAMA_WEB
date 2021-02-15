@@ -1,0 +1,606 @@
+@font-face {
+  src: url(fonts/formular-medium.otf);
+  font-family: "formular-medium";
+}
+
+@font-face {
+  src: url(fonts/UnicaOne-Regular.ttf);
+  font-family: "UnicaOne-Regular";
+}
+
+@font-face {
+  src: url(fonts/formular-mono.otf);
+  font-family: "formular-mono";
+}
+
+@font-face {
+  src: url(fonts/Patrima-Outline.otf);
+  font-family: "Patrima-Outline";
+}
+
+/*
+#page-home {
+  height: 100vh;
+
+  background-image: url("../assets/linha_amarela3.png");
+  background-repeat: no-repeat;
+
+  background-position: 00% 0%;
+}
+*/
+/*
+#page-home .content {
+  width: 90%;
+  max-width: 1100px;
+  height: 100%;
+
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#page-home header {
+  margin-top: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#page-home header a {
+  display: flex;
+
+  color: var(--title-color);
+  font-weight: 700;
+}
+
+#page-home header a span {
+  margin-right: 16px;
+  display: flex;
+
+  background-image: url("../assets/log-in.svg");
+
+  width: 20px;
+  height: 20px;
+}
+*/
+/*
+#page-home main {
+  max-width: 100%;
+}
+
+#page-home main p {
+  font-size: 24px;
+  line-height: 38px;
+  margin-top: 24px;
+}
+
+
+.content-left {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* MENU ESCAMA */
+
+.content {
+  margin-left: 14%;
+  margin-right: 14%;
+}
+
+.content a {
+  background-image: url("https://editor.p5js.org/anastacio/full/2dWkDXUKg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(245, 244, 240) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.top-bar {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: "UnicaOne-Regular";
+  font-size: 20px;
+  width: 100%;
+  height: 80px;
+  line-height: 60px;
+}
+
+.top-bar-mobile {
+  display: none;
+}
+
+.mobile-header {
+  display: none;
+}
+
+.hamburger {
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 45px;
+  padding: 30px 200px 0px 15px;
+  color: #999;
+  border: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+}
+.cross {
+  background: none;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  padding: 30px 200px 0px 15px;
+  color: #999;
+  border: 0;
+  font-size: 3em;
+  line-height: 65px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+}
+
+.logo_escama {
+  width: 30px;
+  height: 30px;
+}
+
+.logo_aumentada {
+  width: 12%;
+  height: 60%;
+}
+
+.menu {
+  z-index: 1000000;
+  font-weight: bold;
+  font-size: 0.8em;
+  width: 100%;
+  background: #f1f1f1;
+  position: absolute;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+.menu li {
+  display: block;
+  padding: 15px 0 15px 0;
+  border-bottom: #dddddd 1px solid;
+}
+
+.menu li:hover {
+  display: block;
+  background: #ffffff;
+  padding: 15px 0 15px 0;
+  border-bottom: #dddddd 1px solid;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  margin: 0px;
+  color: #666;
+}
+
+.menu ul li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #666;
+}
+
+.menu a:hover {
+  text-decoration: none;
+  color: #666;
+}
+
+.glyphicon-home {
+  color: white;
+  font-size: 1.5em;
+  margin-top: 5px;
+  margin: 0 auto;
+}
+header {
+  display: inline-block;
+  font-size: 20px;
+}
+
+a {
+  color: #336699;
+}
+
+/* FIM MENU ESCAMA */
+
+/* WEB ESCAMA */
+
+li {
+  list-style-type: none;
+}
+/*
+.azulejo-wrapper {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+*/
+#img_main {
+  padding-bottom: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.img_menu {
+  display: flex;
+  flex-flow: column wrap;
+}
+.img_menu a {
+  width: 220px;
+  font-family: "Patrima-Outline";
+  font-size: 24px;
+  display: inline-block;
+  color: black;
+}
+
+#imgAR {
+  padding-bottom: 15px;
+  margin-left: 850px;
+  width: 9%;
+  height: 9%;
+}
+
+#seta1 {
+  width: 30%;
+  height: 30%;
+}
+
+#seta2 {
+  float: right;
+  width: 30%;
+  height: 30%;
+}
+
+#about {
+  padding-left: 35%;
+}
+
+.azulejo ul {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+.social {
+  margin-top: 60px;
+  color: #8d8d8d;
+}
+
+.social ul {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+.social a {
+  font-size: 12px;
+  font-family: formular-mono !important;
+  color: #8d8d8d;
+}
+
+#insta {
+  width: 18%;
+  height: 38%;
+}
+
+#dgartes {
+  width: 106%;
+  height: 46%;
+}
+
+#gplay {
+  width: 65%;
+  height: 65%;
+}
+
+/* FIM WEB ESCAMA */
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  /*
+  .main-content-mobile {
+    display: block;
+  }
+  .titulo-mobile {
+    font-size: 400%;
+  }
+
+  .main-content {
+    display: none;
+  }
+  */
+  .content {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 30px 5% 0px 5%;
+  }
+
+  body {
+    background-color: rgba(245, 244, 240);
+  }
+
+  .main-content {
+    padding-left: 15%;
+    padding-right: 20%;
+  }
+
+  .azulejo ul {
+    flex-flow: row wrap;
+  }
+
+  .azulejo ul li {
+    padding-top: 30px;
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    padding-top: 30px;
+    padding-bottom: 10%;
+  }
+
+  .mobile-header {
+    font-family: "UnicaOne-Regular";
+    font-size: 125%;
+
+    line-height: 60px;
+  }
+
+  .hamburger {
+    font-size: 160%;
+    padding: 18% 8% 0px 0px;
+  }
+
+  .cross {
+    font-size: 260%;
+    padding: 18% 8% 0px 0px;
+  }
+
+  .top-bar {
+    display: none !important;
+  }
+
+  .top-bar-mobile {
+    display: inline-block;
+    border-top: 1px solid;
+    font-family: "UnicaOne-Regular";
+    font-size: 130%;
+    line-height: 60px;
+    padding-bottom: 10%;
+  }
+
+  .top-bar-mobile img {
+    width: 40%;
+    height: 40%;
+  }
+
+  .logo_escama {
+    width: 18%;
+    height: 45%;
+  }
+
+  #imgAR {
+    display: none;
+  }
+
+  #insta {
+    padding-top: 3%;
+    margin-left: 31%;
+    width: 20%;
+    height: 56%;
+  }
+
+  #dgartes {
+    padding-top: 3%;
+    width: 103%;
+    height: 62%;
+  }
+
+  #gplay {
+    width: 75%;
+    height: 75%;
+  }
+
+  .social ul {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .social ul li {
+    padding-top: 10%;
+  }
+}
+
+/* FIM Mobile */
+
+/* FIM WEB CAROUSEL */
+
+/*
+.btn-top p {
+  padding-left: 100px;
+}
+*/
+
+/*
+.titulo {
+  font-size: 640%;
+  text-transform: uppercase;
+  font-family: formular-medium !important;
+  margin: 100px;
+  color: Black;
+}
+
+.social {
+  margin-top: 50px;
+  margin-left: 60px;
+  flex: 1;
+  color: #8d8d8d;
+  text-decoration: underline;
+}
+
+.social a {
+  font-size: 16px;
+  font-family: formular-mono !important;
+  color: #8d8d8d;
+  text-decoration: underline;
+}
+
+.content-right {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.btn-top {
+  padding-top: 10px;
+  padding-left: 200px;
+  font-family: formular-medium !important;
+  font-size: 15px;
+  width: 300px;
+}
+
+.social-itens li {
+  display: inline;
+  padding-left: 5%;
+}
+*/
+/*
+#page-home span {
+  padding-top: 300px;
+  width: 300px;
+  font-family: formular-medium !important;
+  font-size: 25px !important;
+  text-align: right !important;
+  align-content: right !important;
+}
+*/
+/*
+#page-home span img {
+  padding-left: 60px;
+}
+
+.social-mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    flex-flow: row wrap;
+  }
+
+  .social {
+    display: none;
+  }
+
+  .social-mobile {
+    width: 350px;
+    padding-top: 50px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .social-mobile a {
+    font-size: 14px;
+    color: #8d8d8d;
+    text-decoration: underline;
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+
+  .social-itens-mobile li {
+    display: inline-flex;
+    padding-top: 10px;
+    padding-left: 5%;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .social-mobile-agenda {
+    margin-left: 20px;
+  }
+  #page-home {
+    height: 120vh;
+
+    background-image: url("../assets/linha_amarela2.png");
+    background-repeat: no-repeat;
+
+    background-position: 00% 0%;
+  }
+  .titulo {
+    font-size: 240%;
+    text-transform: uppercase;
+    font-family: formular-medium !important;
+    margin: 50px;
+  }
+
+  .btn-top {
+    padding-top: 20px;
+    padding-right: 100px;
+    font-size: 20px;
+    width: 100%;
+    text-align: right;
+    font-family: formular-medium !important;
+  }
+
+  #page-home span {
+    padding-top: 20px;
+    width: 100%;
+    padding-right: 100px;
+    font-family: formular-medium !important;
+    font-size: 20px !important;
+    text-align: right !important;
+    align-content: right !important;
+  }
+}
+*/
+/*
+.main-content-mobile {
+  display: none;
+}
+
+/* Mobile */
+/*
+@media (max-width: 900px) {
+  .main-content-mobile {
+    display: block;
+  }
+  .titulo-mobile {
+    font-size: 400%;
+  }
+
+  .main-content {
+    display: none;
+  }
+}
+*/

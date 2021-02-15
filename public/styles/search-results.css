@@ -1,0 +1,173 @@
+@font-face {
+  src: url(fonts/formular-medium.otf);
+  font-family: "formular-medium";
+}
+
+@font-face {
+  src: url(fonts/formular-mono.otf);
+  font-family: "formular-mono";
+}
+
+body {
+  background-color: white;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  background: #f9a2bb;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 22rem;
+  z-index: -1;
+}
+
+#page-search-results {
+  width: 90%;
+  max-width: 1100px;
+
+  /*Alinhamento de caixa pelo lado de fora*/
+  margin: 0 auto;
+}
+
+#page-search-results header {
+  margin-top: 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page-search-results header a {
+  color: white;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+}
+
+#page-search-results header a span {
+  margin-right: 16px;
+  background-image: url("../assets/seta_branca.png");
+
+  display: flex; /*dentro da mesma div vc coloca o display flex pra fazer flexbox*/
+  width: 18px;
+  height: 22.5px;
+}
+
+#page-search-results header .voltar {
+  display: none;
+}
+
+main {
+  margin: 48px;
+}
+
+main h4 {
+  color: #322153;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 50px;
+  font-family: formular-medium;
+
+  margin-bottom: 32px;
+}
+
+main .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 45px;
+}
+
+main .cards img {
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+
+  border-radius: 8px 8px 0 0;
+}
+
+main .card h1 {
+  font-family: formular-medium;
+  margin-top: 10px;
+  font-size: 24px;
+  line-height: 41px;
+  color: #322153;
+}
+
+main .card h3 {
+  margin: 0 0;
+
+  font-family: formular-medium;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 34px;
+
+  color: #8c3e7b;
+}
+
+main .card p {
+  font-size: 14px;
+  line-height: 26px;
+  font-family: formular-mono;
+  color: #6c6c80;
+}
+
+main .card span {
+  font-size: 14px;
+  line-height: 26px;
+  font-family: formular-medium;
+  color: #008f54;
+}
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.footer-results {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border: 0;
+  border-top: 1px solid #ccc;
+  padding-top: 50px;
+}
+
+.footer-img {
+  flex: 2;
+  padding-top: 30px;
+  padding-right: 200px;
+
+  width: 85%;
+  height: 85%;
+}
+
+.footer-txt {
+  flex: 1;
+}
+
+.footer-results h1 {
+  padding-top: 20px;
+  font-size: 30px;
+  font-family: formular-medium;
+  color: black;
+}
+
+.footer-results h2 {
+  font-size: 17px;
+  font-family: formular-mono;
+  color: black;
+}
+
+.footer-results a {
+  padding-top: 30px;
+  font-size: 20px;
+  font-family: formular-mono;
+  color: #8d8d8d;
+  text-decoration: underline;
+}

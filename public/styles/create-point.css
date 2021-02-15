@@ -1,0 +1,325 @@
+@font-face {
+  src: url(fonts/formular-medium.otf);
+  font-family: "formular-medium";
+}
+
+@font-face {
+  src: url(fonts/formular-mono.otf);
+  font-family: "formular-mono";
+}
+
+@font-face {
+  src: url(fonts/zigzag.otf);
+  font-family: "zigzag";
+}
+
+@font-face {
+  src: url(fonts/UnicaOne-Regular.ttf);
+  font-family: "UnicaOne-Regular";
+}
+
+@font-face {
+  src: url(fonts/Patrima-Outline.otf);
+  font-family: "Patrima-Outline";
+}
+
+#page-create-point {
+  width: 90%;
+  max-width: 1100px;
+
+  /*Alinhamento de caixa pelo lado de fora*/
+  margin: 0 auto;
+}
+
+#page-create-point header {
+  margin-top: 48px;
+  margin-left: 5.5%;
+  margin-right: 6.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page-create-point header a {
+  color: #3f496b;
+  font-family: "UnicaOne-Regular";
+  font-size: 160%;
+
+  display: flex;
+  align-items: center;
+}
+
+#page-create-point header a span {
+  margin-right: 16px;
+  background-image: url("../assets/seta_branca.png");
+  padding-right: 18px;
+  display: flex; /*dentro da mesma div vc coloca o display flex pra fazer flexbox*/
+  width: 10px;
+  height: 22.5px;
+}
+
+#page-create-point header .voltar {
+  display: none;
+}
+
+form {
+  background-color: white;
+
+  /*preenchimento externo*/
+  margin: 80px auto;
+
+  /*preencimento interno*/
+  padding: 64px;
+
+  border-radius: 8px;
+
+  max-width: 980px;
+}
+
+form h1 {
+  font-family: formular-medium;
+  font-size: 36px;
+}
+
+form fieldset {
+  margin-top: 64px;
+
+  border: 0;
+}
+
+form legend {
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-family: "UnicaOne-Regular";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.address-map {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.select-item2 {
+  margin-bottom: 40px;
+  margin-top: 160px;
+  font-size: 24px;
+  font-family: "UnicaOne-Regular";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#select-algarve {
+  padding-top: 40px;
+}
+
+form legend span {
+  font-size: 14px;
+  color: var(--title-color);
+}
+
+form .field {
+  flex: 1; /*preencher todo o campo (div) e ficar justificado*/
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 24px;
+}
+
+form .field-group {
+  display: flex;
+}
+
+form input,
+form select {
+  background-color: #f0f0f5;
+
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+
+  border-radius: 8px;
+}
+
+.imagine-txt {
+  height: 100px !important;
+}
+
+.observation {
+  color: #6d6d6d;
+  margin-top: 60px;
+}
+
+form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+form label {
+  font-size: 14px; /*font size sempre 14,16,18,24....*/
+  margin-bottom: 8px;
+}
+
+form textarea {
+  background-color: #f0f0f5;
+
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+
+  border-radius: 8px;
+}
+
+form .field-group .field + .field {
+  margin-left: 24px;
+}
+
+form button {
+  width: 260px;
+  height: 56px;
+
+  background-color: #3f496b;
+  border-radius: 8px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+
+  border: 0;
+
+  margin-top: 40px;
+
+  transition: background-color 400ms;
+}
+
+form button:hover {
+  background-color: #342374;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.items-grid li {
+  background-color: #f5f5f5;
+  list-style: none;
+
+  border: 2px solid #f5f5f5;
+  border-radius: 8px;
+  width: 200px;
+  height: 200px;
+
+  padding: 10px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.items-grid li span {
+  margin-top: 12px;
+
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--title-color);
+}
+
+.items-grid li.selected {
+  background: #e1faec;
+  border: 2px solid #342374;
+}
+
+/*tirar os clicáveis da imagem e span para o click retornar só id*/
+.items-grid li img,
+.items-grid li span {
+  pointer-events: none;
+}
+
+.items-grid p {
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: "UnicaOne-Regular";
+}
+
+.create-point-head {
+  padding-top: 40px;
+  padding-left: 5.4%;
+  padding-right: 4.4%;
+}
+
+.create-point-head h1 {
+  padding-top: 40px;
+  font-size: 240%;
+
+  font-family: "Patrima-Outline";
+  color: #3f496b;
+}
+
+.create-point-head h2 {
+  padding-top: 20px;
+  font-size: 155%;
+  font-family: "UnicaOne-Regular";
+  color: #3f496b;
+}
+
+.create-point-head h3 {
+  padding-top: 20px;
+  font-size: 30px;
+  font-family: "UnicaOne-Regular";
+  color: #3f496b;
+}
+
+#results {
+  font-size: 15px;
+  font-family: "UnicaOne-Regular";
+  color: #3f496b;
+  cursor: pointer;
+}
+
+#results-top {
+  font-size: 15px;
+  font-family: "UnicaOne-Regular";
+  color: #342374;
+}
+
+#results .address:hover {
+  color: #342374;
+}
+
+#point-created .check-txt {
+  font-size: 15px;
+  font-family: zigzag;
+  color: #342374;
+}
+
+@media (max-width: 900px) {
+  #page-create-point header a {
+    font-size: 250%;
+  }
+
+  .create-point-head h1 {
+    font-size: 100%;
+  }
+
+  #page-create-point .create-point-head h2 {
+    font-size: 20px;
+  }
+}
