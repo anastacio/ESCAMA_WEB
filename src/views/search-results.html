@@ -34,12 +34,14 @@
 
         <div class="cards">
 
-            {% for place in places %}
+            {% for tile in tiles %}
 
             <div class="card">
-                <img src="{{ place.image }}" alt="{{ place.name }}">
-                <h1>{{ place.name }}</h1>
-                <h3>{{ place.items }}</h3>
+                <img src="{{ tile.image }}" alt="{{ tile.name }}">
+                <h1>{{ tile.name }}</h1>
+                <h3>{{ tile.types }}</h3>
+                <h3>{{ tile.regions }}</h3>
+
                 <p>
                     <br />
                     {{ place.address }}
@@ -56,7 +58,6 @@
 
                 <br />
                 <p>
-                    <span>Título:</span>&nbsp;&nbsp;{{ place.title}}
 
             <!--
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Idade:</span>&nbsp;&nbsp;{{ place.idade }}
@@ -141,7 +142,7 @@
         L
             .marker([latitude, longitude])
             .addTo(map)
-            .bindPopup("Essa imaginação</br>veio daqui.")
+            .bindPopup("Essa azulejo</br>veio daqui.")
             .openPopup();
 
     })

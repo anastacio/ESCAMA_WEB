@@ -49,18 +49,27 @@ document
 */
 // Itens de ecoleta
 // pegar todos os li's
+const itemsToCollectTypes = document.querySelectorAll("#types li");
 
-const itemsToCollect = document.querySelectorAll(".items-grid li");
+const itemsToCollectRegions = document.querySelectorAll("#regions li");
 
-for (const item of itemsToCollect) {
-  item.addEventListener("click", handleSelectedItem);
+const collectedTypes = document.querySelector("input[name=types]");
+
+const collectedRegions = document.querySelector("input[name=regions]");
+
+let selectedTypes = [];
+let selectedRegions = [];
+
+for (const item of itemsToCollectTypes) {
+  item.addEventListener("click", (e) => handleSelectedItem(e, collectedTypes, selectedTypes));
 }
 
-const collectedItems = document.querySelector("input[name=items]");
+for (const item of itemsToCollectRegions) {
+  item.addEventListener("click", (e) => handleSelectedItem(e, collectedRegions, selectedRegions));
+}
 
-let selectedItems = [];
 
-function handleSelectedItem(event) {
+function handleSelectedItem(event, collectedItems, selectedItems) {
   const itemLi = event.target;
 
   //add ou rem uma classe com js
@@ -89,8 +98,6 @@ function handleSelectedItem(event) {
     //se não estiver selecionado, adicionar à seleção
     selectedItems.push(itemId);
   }
-
-  console.log(selectedItems);
 
   //atualizar o campo input escondido com os itens selecionados
 

@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% set pageId = "page-create-point" %} {% block
 title %}
 
-<title>IMAGINE2030</title>
+<title>ESCAMA</title>
 
 {% endblock title %} {% block styles %}
 
@@ -52,7 +52,7 @@ title %}
 
     <div class="field-group">
       <div class="field">
-        <label for="address">Diga algo sobre esse azlejo</label>
+        <label for="address">Diga algo sobre esse azulejo</label>
         <textarea class="imagine-txt" name="address" required="required" type="text"></textarea>
       </div>
     </div>
@@ -120,22 +120,22 @@ title %}
       <span>Selecione um ou mais itens abaixo</span>
     </legend>
 
-    <div class="items-grid">
-      <li data-id="ODS1 - Erradicação da pobreza">
-        <img alt="ODS1 - Erradicação da pobreza" src="assets/padrao.png" />
+    <div id="types" class="items-grid">
+      <li data-id="padrao">
+        <img alt="padrao" src="assets/padrao.png" />
         <p>azulejo </br>padrão</p>
 
       </li>
-      <li data-id="ODS2 - Fome zero e agricultura sustentável">
-        <img alt="ODS2 - Fome zero e agricultura sustentável" src="assets/metro2.png" />
+      <li data-id="metropolitano">
+        <img alt="Ometropolitano" src="assets/metro2.png" />
         <p>azulejo</br>metropolitano</p>
       </li>
-      <li data-id="ODS3 - Saúde e bem-estar">
-        <img alt="ODS3 - Saúde e bem-estar" src="assets/publi2.png" />
+      <li data-id="publicitario">
+        <img alt="publicitario" src="assets/publi2.png" />
         <p>azulejo</br>publicitário</p>
       </li>
-      <li data-id="ODS4 - Educação de qualidade">
-        <img alt="ODS4 - Educação de qualidade" src="assets/figu.png" />
+      <li data-id="figurativo">
+        <img alt="figurativo" src="assets/figu.png" />
         <p>azulejo</br>figurativo</p>
       </li>
 
@@ -148,39 +148,38 @@ title %}
     </legend>
 
 
-    <div class="items-grid">
+    <div id="regions" class="items-grid">
 
-      <li data-id="ODS5 - Igualdade de gênero">
-        <img alt="ODS5 - Igualdade de gênero" src="assets/lisboa.png" />
+      <li data-id="lisboa">
+        <img alt="lisboa" src="assets/lisboa.png" />
         <p>Lisboa</p>
       </li>
-      <li data-id="ODS6 - Água limpa e saneamento">
-        <img alt="ODS6 - Água limpa e saneamento" src="assets/norte.png" />
+
+      <li data-id="norte">
+        <img alt="norte" src="assets/norte.png" />
         <p>Norte</p>
       </li>
-      <li data-id="ODS7 - Energia limpa e acessível">
-        <img alt="ODS7 - Energia limpa e acessível" src="assets/centro.png" />
+
+      <li data-id="centro">
+        <img alt="centro" src="assets/centro.png" />
         <p>Centro</p>
       </li>
-      <li data-id="ODS8 - Trabalho decente e crescimento econômico">
-        <img alt="ODS8 - Trabalho decente e crescimento econômico" src="assets/alentejo.png" />
-        <p>alentejo</p>
+      
+      <li data-id="alentejo">
+        <img alt="alentejo" src="assets/alentejo.png" />
+        <p>Alentejo</p>
       </li>
     
-     
-      
-    </div>
-
-    <div id="select-algarve" class="items-grid">
-      
-      <li  data-id="ODS9 - Inovação infraestrutura">
-        <img alt="ODS9 - Inovação infraestrutura" src="assets/algarve.png" />
-        <p>algarve</p>
+      <li data-id="algarve">
+        <img alt="algarve" src="assets/algarve.png" />
+        <p>Algarve</p>
       </li>
       
     </div>
 
-    <input name="items" type="hidden" />
+    <input name="types" type="hidden" />
+    <input name="regions" type="hidden" />
+
   </fieldset>
 
   <p class="observation">* Revise seu formulário, não será possível realizar alterações.</p>
@@ -203,9 +202,9 @@ scripts %}
 
 
 <script type="text/javascript">
-  // New York
-  var startlat = 40.75637123;
-  var startlon = -73.98545321;
+  // Lisboa
+  var startlat = 38.7476774;
+  var startlon = -9.2547371;
 
   var options = {
     center: [startlat, startlon],
@@ -215,23 +214,25 @@ scripts %}
   document.getElementById("lat").value = startlat;
   document.getElementById("lon").value = startlon;
 
-  var map = L.map("map", options);
+  var myMap = L.map("map", options);
   var nzoom = 12;
 
   L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
     attribution: "OSM",
-  }).addTo(map);
+  }).addTo(myMap);
+
+
 
   var myMarker = L.marker([startlat, startlon], {
     title: "Coordinates",
     alt: "Coordinates",
     draggable: true,
   })
-    .addTo(map)
+    .addTo(myMap)
     .on("dragend", function () {
       var lat = myMarker.getLatLng().lat.toFixed(8);
       var lon = myMarker.getLatLng().lng.toFixed(8);
-      var czoom = map.getZoom();
+      var czoom = myMap.getZoom();
       if (czoom < 18) {
         nzoom = czoom + 2;
       }
@@ -239,9 +240,9 @@ scripts %}
         nzoom = 18;
       }
       if (czoom != 18) {
-        map.setView([lat, lon], nzoom);
+        myMap.setView([lat, lon], nzoom);
       } else {
-        map.setView([lat, lon]);
+        myMap.setView([lat, lon]);
       }
       document.getElementById("lat").value = lat;
       document.getElementById("lon").value = lon;
@@ -250,7 +251,7 @@ scripts %}
 
   function chooseAddr(lat1, lng1) {
     myMarker.closePopup();
-    map.setView([lat1, lng1], 18);
+    myMap.setView([lat1, lng1], 18);
     myMarker.setLatLng([lat1, lng1]);
     lat = lat1.toFixed(8);
     lon = lng1.toFixed(8);

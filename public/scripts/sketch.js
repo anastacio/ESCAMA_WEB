@@ -146,5 +146,4 @@ function draw() {
   if (fade > 255) fadeAmount = -10;
 
   fade += fadeAmount;
-  print(fade);
 }

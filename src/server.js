@@ -1,9 +1,17 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
-const db = require("./database/db");
+const db = require("./database/db-config.js");
+const cors = require("cors");
+const upload = require("./config/multer.config");
+const s3 = require("../src/config/aws.config");
+const fs = require("fs");
+const dateConversion = require("./helpers/dateConversion");
 
 const server = express();
+server.use(cors());
 
+db.initializeDB();
+ 
 server.use(express.static("public"));
 server.use(express.urlencoded({ extended: true }));
 
@@ -24,47 +32,98 @@ server.get("/about", (req, res) => {
   return res.render("about.html");
 });
 
-server.post("/savepoint", (req, res) => {
-  const { name, image, address, address2, state, city, items } = req.body;
+server.post("/savepoint", upload.single("image"), (req, res) => {
 
-  const query = `
-    INSERT INTO places (
-      image,
-      name,
-      address,
-      address2,
-      state,
-      city,
-      items
-    ) VALUES ( ?,?,?,?,?,?,? );
-  `;
+  const params = {
+    ACL: "public-read",
+    Bucket: "teste-escama",
+    Body: fs.createReadStream(req.file.path),
+    Key: `${Date.now()}${req.file.originalname}`,
+  };
 
-  const values = [image, name, address, address2, state, city, items];
-
-  db.run(query, values, function (err) {
+  s3.upload(params, async (err, data) => {
     if (err) {
-      console.log(err);
-      res.send("Erro no cadastro");
+      console.log("Error occured while trying to upload to S3 bucket", err);
     }
-    return res.render("create-point.html", { saved: true });
+
+    if (data) {
+      fs.unlinkSync(req.file.path);
+      const imageLocationURL = data.Location;
+
+      const query = `INSERT INTO tiles (
+        image,
+        name,
+        address,
+        address2,
+        date,
+        lat,
+        lon,
+        regions,
+        types
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9);`;
+
+      const values = [
+        imageLocationURL,
+        req.body.name,
+        req.body.address,
+        req.body.address2,
+        new Date(),
+        req.body.lat,
+        req.body.lon,
+        req.body.regions,
+        req.body.types,
+      ];
+
+      try {
+        await db.query(query, values);
+        console.log("Cadastrado com sucesso");
+        return res.render("create-point.html", { saved: true });
+      } catch (err) {
+        console.log(err);
+        return res.send("Erro no cadastro!");
+      }
+    }
   });
 });
 
-server.get("/search-results", (req, res) => {
-  const { search } = req.query;
+server.get("/search-results", async (req, res) => {
+    const search = req.query.search;
+
   if (search == "") {
-    return res.render("search-results.html", { places: [], total: 0 });
+    //pesquisa vazia
+    return res.render("search-results.html", { total: 0 });
   }
-  db.all(
-    `SELECT * FROM places WHERE city LIKE '%${search}%'`,
-    function (err, rows) {
-      if (err) {
-        return console.log(err);
-      }
-      const total = rows.length;
-      return res.render("search-results.html", { places: rows, total });
-    }
-  );
+
+  try {
+    let query = "SELECT * FROM tiles";
+    // let query = "SELECT * FROM tiles WHERE";
+
+
+    // if (typeof req.query.search === "object" && req.query.search.length > 1) {
+    //   search.map((item, index) => {
+    //     index > 0 ? (query += " OR ") : null;
+    //     query += ` regions LIKE '%${item}%'`;
+    //   });
+    // } else {
+    //   query += ` regions LIKE '%${search}%'`;
+    // }
+
+    const result = await db.query(query);
+
+    const { rows } = result;
+
+    rows.map((row) => {
+      console.log(row.data);
+      row.data = dateConversion(row.data);
+    });
+
+    return res.render("search-results.html", {
+      tiles: rows,
+      total: rows.length,
+    });
+  } catch (error) {
+    return console.log(error);
+  }
 });
 
 // 404 not found
