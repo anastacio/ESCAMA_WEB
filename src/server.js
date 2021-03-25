@@ -141,4 +141,4 @@ server.use((req, res) => {
   res.type("txt").send("Not found");
 });
 
-server.listen(3333);
+server.listen(process.env.PORT || 3000);
