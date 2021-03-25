@@ -11,7 +11,7 @@ const server = express();
 server.use(cors());
 
 db.initializeDB();
- 
+
 server.use(express.static("public"));
 server.use(express.urlencoded({ extended: true }));
 
@@ -33,7 +33,6 @@ server.get("/about", (req, res) => {
 });
 
 server.post("/savepoint", upload.single("image"), (req, res) => {
-
   const params = {
     ACL: "public-read",
     Bucket: "teste-escama",
@@ -53,7 +52,7 @@ server.post("/savepoint", upload.single("image"), (req, res) => {
       const query = `INSERT INTO tiles (
         image,
         name,
-        address,
+        description,
         address2,
         date,
         lat,
@@ -65,7 +64,7 @@ server.post("/savepoint", upload.single("image"), (req, res) => {
       const values = [
         imageLocationURL,
         req.body.name,
-        req.body.address,
+        req.body.description,
         req.body.address2,
         new Date(),
         req.body.lat,
@@ -87,7 +86,7 @@ server.post("/savepoint", upload.single("image"), (req, res) => {
 });
 
 server.get("/search-results", async (req, res) => {
-    const search = req.query.search;
+  const search = req.query.search;
 
   if (search == "") {
     //pesquisa vazia
@@ -97,7 +96,6 @@ server.get("/search-results", async (req, res) => {
   try {
     let query = "SELECT * FROM tiles";
     // let query = "SELECT * FROM tiles WHERE";
-
 
     // if (typeof req.query.search === "object" && req.query.search.length > 1) {
     //   search.map((item, index) => {

@@ -18,7 +18,7 @@ function initializeDB() {
     id SERIAL PRIMARY KEY,
     image TEXT,
     name TEXT, 
-    address TEXT, 
+    description TEXT, 
     address2 TEXT, 
     date TEXT,
     lat TEXT, 
