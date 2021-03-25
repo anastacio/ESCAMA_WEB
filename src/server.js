@@ -35,7 +35,7 @@ server.get("/about", (req, res) => {
 server.post("/savepoint", upload.single("image"), (req, res) => {
   const params = {
     ACL: "public-read",
-    Bucket: "teste-escama",
+    Bucket: "escamaweb",
     Body: fs.createReadStream(req.file.path),
     Key: `${Date.now()}${req.file.originalname}`,
   };
