@@ -147,6 +147,10 @@ footer {
   height: 85%;
 }
 
+#footer-tile {
+  max-width: 250px;
+}
+
 .footer-txt {
   flex: 1;
 }

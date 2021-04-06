@@ -310,6 +310,14 @@ form button:hover {
   color: #342374;
 }
 
+.check-icon {
+  max-width: 60px;
+}
+
+.confirm-title {
+  color: #000 !important;
+}
+
 @media (max-width: 900px) {
   #page-create-point header a {
     font-size: 250%;

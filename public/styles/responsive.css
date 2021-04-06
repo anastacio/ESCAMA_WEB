@@ -151,6 +151,10 @@
     height: 100%;
   }
 
+  #footer-tile {
+    max-width: 300px;
+  }
+
   #page-search-results .footer-txt h1 {
     font-size: 100%;
   }
