@@ -42,29 +42,29 @@ title %}
     <div class="field-group">
       <div class="field">
         <label for="name">Dê um título</label>
-        <input name="name" required="required" type="text" />
+        <input name="name" required type="text" />
       </div>
       <div class="field">
         <label for="image">Imagem do azulejo</label>
-        <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg" required="required" />
+        <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg" required />
       </div>
     </div>
 
     <div class="field-group">
       <div class="field">
         <label for="description">Diga algo sobre esse azulejo</label>
-        <textarea class="imagine-txt" name="description" required="required" type="text"></textarea>
+        <textarea class="imagine-txt" name="description" required type="text"></textarea>
       </div>
     </div>
  <!--
     <div class="field-group">
       <div class="field">
         <label for="title">Nome</label>
-        <input name="title" required="required" type="text" />
+        <input name="title" required type="text" />
       </div>
       <div class="field">
         <label for="idade">Idade</label>
-        <input name="idade" required="required" type="text" />
+        <input name="idade" required type="text" />
       </div>
     </div>
 
@@ -73,7 +73,7 @@ title %}
     <div class="field-group">
       <div class="field">
         <label for="state">Estado</label>
-        <select name="uf" required="required">
+        <select name="uf" required>
           <option value="">Selecione o estado</option>
         </select>
 
@@ -82,7 +82,7 @@ title %}
 
       <div class="field">
         <label for="city">Cidade</label>
-        <select disabled="disabled" name="city" required="required">
+        <select disabled="disabled" name="city" required>
           <option value="">Selecione a Cidade</option>
         </select>
       </div>
@@ -95,14 +95,14 @@ title %}
             bairro</label>
         </span>
 
-        <input id="address2" name="address2" size="58" type="text" value="" required="required" />
+        <input id="address2" name="address2" size="58" type="text" value="" required />
         <button onclick="addr_search();" type="button">Buscar no mapa</button>
         <div id="results-top"></div>
         <div id="results">
 
         </div>
-        <input style="display:none" id="lat" name="lat" required="required" size="12" type="text" value="" />
-        <input style="display:none" id="lon" name="lon" required="required" size="12" type="text" value="" />
+        <input style="display:none" id="lat" name="lat" required size="12" type="text" value="" />
+        <input style="display:none" id="lon" name="lon" required size="12" type="text" value="" />
 
         <br />
 
@@ -177,8 +177,8 @@ title %}
       
     </div>
 
-    <input name="types" type="hidden" />
-    <input name="regions" type="hidden" />
+    <input name="types" type="hidden" required />
+    <input name="regions" type="hidden" required />
 
   </fieldset>
 

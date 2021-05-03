@@ -1,26 +1,55 @@
 @font-face {
-  src: url(fonts/formular-medium.otf);
-  font-family: "formular-medium";
+  font-family: "Formular";
+  src: url("../fonts/Formular-Bold.woff2") format("woff2"),
+    url("../fonts/Formular-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/formular-mono.otf);
-  font-family: "formular-mono";
+  font-family: "Formular Mono";
+  src: url("../fonts/FormularMono.woff2") format("woff2"),
+    url("../fonts/FormularMono.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/zigzag.otf);
-  font-family: "zigzag";
+  font-family: "Formular";
+  src: url("../fonts/Formular-Medium.woff2") format("woff2"),
+    url("../fonts/Formular-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/UnicaOne-Regular.ttf);
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
+  src: url("../fonts/UnicaOne-Regular.woff2") format("woff2"),
+    url("../fonts/UnicaOne-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/Patrima-Outline.otf);
-  font-family: "Patrima-Outline";
+  font-family: "ZIGZAG";
+  src: url("../fonts/ZIGZAG-NotRounded.woff2") format("woff2"),
+    url("../fonts/ZIGZAG-NotRounded.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patrima Outline";
+  src: url("../fonts/Patrima-Outline.woff2") format("woff2"),
+    url("../fonts/Patrima-Outline.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 #page-about {
@@ -42,7 +71,7 @@
 
 #page-about header a {
   color: #3f496b;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
   font-size: 30px;
 
   display: flex;
@@ -79,34 +108,34 @@
 .create-point-head h1 {
   padding-top: 40px;
   font-size: 260%;
-  font-family: "Patrima-Outline";
+  font-family: "Patrima Outline";
   color: #3f496b;
 }
 
 .create-point-head h2 {
   padding-top: 20px;
-  font-size: 135%;
-  font-family: "UnicaOne-Regular";
+  font-size: 115%;
+  font-family: "Unica One";
   color: #3f496b;
 }
 
 .create-point-head h3 {
   padding-top: 20px;
   font-size: 30px;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
   color: #3f496b;
 }
 
 #results {
   font-size: 15px;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
   color: #3f496b;
   cursor: pointer;
 }
 
 #results-top {
   font-size: 15px;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
   color: #342374;
 }
 
@@ -116,7 +145,7 @@
 
 #point-created .check-txt {
   font-size: 15px;
-  font-family: zigzag;
+  font-family: ZIGZAG;
   color: #342374;
 }
 
@@ -152,7 +181,7 @@
 
 .social a {
   font-size: 12px;
-  font-family: formular-mono !important;
+  font-family: Formular Mono !important;
   color: #8d8d8d;
 }
 
@@ -182,7 +211,7 @@
 
   #page-about header a {
     padding-left: 10px;
-    font-size: 150%;
+    font-size: 110%;
     padding-right: 10px;
   }
 
@@ -191,7 +220,7 @@
   }
 
   .create-point-head h2 {
-    font-size: 110%;
+    font-size: 100%;
   }
 
   .telas-app ul li {

@@ -1,30 +1,55 @@
 @font-face {
-  src: url(fonts/formular-medium.otf);
-  font-family: "formular-medium";
+  font-family: "Formular";
+  src: url("../fonts/Formular-Bold.woff2") format("woff2"),
+    url("../fonts/Formular-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/formular-bold.otf);
-  font-family: "formular-bold";
+  font-family: "Formular Mono";
+  src: url("../fonts/FormularMono.woff2") format("woff2"),
+    url("../fonts/FormularMono.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/formular-mono.otf);
-  font-family: "formular-mono";
+  font-family: "Formular";
+  src: url("../fonts/Formular-Medium.woff2") format("woff2"),
+    url("../fonts/Formular-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/zigzag.otf);
-  font-family: "zigzag";
-}
-@font-face {
-  src: url(fonts/UnicaOne-Regular.ttf);
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
+  src: url("../fonts/UnicaOne-Regular.woff2") format("woff2"),
+    url("../fonts/UnicaOne-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/Patrima-Outline.otf);
-  font-family: "Patrima-Outline";
+  font-family: "ZIGZAG";
+  src: url("../fonts/ZIGZAG-NotRounded.woff2") format("woff2"),
+    url("../fonts/ZIGZAG-NotRounded.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patrima Outline";
+  src: url("../fonts/Patrima-Outline.woff2") format("woff2"),
+    url("../fonts/Patrima-Outline.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 #modal {
@@ -54,7 +79,7 @@
 
 #modal .content {
   font-size: 16px;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
   color: white;
 
   width: 620px;
@@ -81,7 +106,7 @@
 
 #modal .header h1 {
   color: black;
-  font-family: "Patrima-Outline";
+  font-family: "Patrima Outline";
   font-size: 30px;
   padding-left: 10px;
   line-height: 42px;

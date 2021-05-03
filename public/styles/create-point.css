@@ -1,26 +1,55 @@
 @font-face {
-  src: url(fonts/formular-medium.otf);
-  font-family: "formular-medium";
+  font-family: "Formular";
+  src: url("fonts/Formular-Bold.woff2") format("woff2"),
+    url("fonts/Formular-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/formular-mono.otf);
-  font-family: "formular-mono";
+  font-family: "Formular Mono";
+  src: url("fonts/FormularMono.woff2") format("woff2"),
+    url("fonts/FormularMono.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/zigzag.otf);
-  font-family: "zigzag";
+  font-family: "Formular";
+  src: url("fonts/Formular-Medium.woff2") format("woff2"),
+    url("fonts/Formular-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/UnicaOne-Regular.ttf);
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
+  src: url("fonts/UnicaOne-Regular.woff2") format("woff2"),
+    url("fonts/UnicaOne-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/Patrima-Outline.otf);
-  font-family: "Patrima-Outline";
+  font-family: "ZIGZAG";
+  src: url("fonts/ZIGZAG-NotRounded.woff2") format("woff2"),
+    url("fonts/ZIGZAG-NotRounded.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patrima Outline";
+  src: url("fonts/Patrima-Outline.woff2") format("woff2"),
+    url("fonts/Patrima-Outline.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 #page-create-point {
@@ -42,7 +71,7 @@
 
 #page-create-point header a {
   color: #3f496b;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
   font-size: 160%;
 
   display: flex;
@@ -77,7 +106,7 @@ form {
 }
 
 form h1 {
-  font-family: formular-medium;
+  font-family: Formular;
   font-size: 36px;
 }
 
@@ -90,7 +119,7 @@ form fieldset {
 form legend {
   margin-bottom: 40px;
   font-size: 20px;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -108,7 +137,7 @@ form legend {
   margin-bottom: 40px;
   margin-top: 160px;
   font-size: 24px;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -256,7 +285,7 @@ form button:hover {
 .items-grid p {
   margin-top: 30px;
   font-size: 20px;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
 }
 
 .create-point-head {
@@ -268,35 +297,34 @@ form button:hover {
 .create-point-head h1 {
   padding-top: 40px;
   font-size: 240%;
-
-  font-family: "Patrima-Outline";
+  font-family: "Patrima Outline";
   color: #3f496b;
 }
 
 .create-point-head h2 {
   padding-top: 20px;
-  font-size: 155%;
-  font-family: "UnicaOne-Regular";
+  font-size: 120%;
+  font-family: "Unica One";
   color: #3f496b;
 }
 
 .create-point-head h3 {
   padding-top: 20px;
   font-size: 30px;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
   color: #3f496b;
 }
 
 #results {
   font-size: 15px;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
   color: #3f496b;
   cursor: pointer;
 }
 
 #results-top {
   font-size: 15px;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
   color: #342374;
 }
 
@@ -306,7 +334,7 @@ form button:hover {
 
 #point-created .check-txt {
   font-size: 15px;
-  font-family: zigzag;
+  font-family: ZIGZAG;
   color: #342374;
 }
 

@@ -1,11 +1,55 @@
 @font-face {
-  src: url(fonts/formular-medium.otf);
-  font-family: "formular-medium";
+  font-family: "Formular";
+  src: url("../fonts/Formular-Bold.woff2") format("woff2"),
+    url("../fonts/Formular-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/formular-mono.otf);
-  font-family: "formular-mono";
+  font-family: "Formular Mono";
+  src: url("../fonts/FormularMono.woff2") format("woff2"),
+    url("../fonts/FormularMono.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Formular";
+  src: url("../fonts/Formular-Medium.woff2") format("woff2"),
+    url("../fonts/Formular-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Unica One";
+  src: url("../fonts/UnicaOne-Regular.woff2") format("woff2"),
+    url("../fonts/UnicaOne-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ZIGZAG";
+  src: url("../fonts/ZIGZAG-NotRounded.woff2") format("woff2"),
+    url("../fonts/ZIGZAG-NotRounded.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patrima Outline";
+  src: url("../fonts/Patrima-Outline.woff2") format("woff2"),
+    url("../fonts/Patrima-Outline.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
@@ -69,9 +113,8 @@ main h4 {
   color: #322153;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 50px;
-  font-family: formular-medium;
-
+  font-size: 38px;
+  font-family: Formular;
   margin-bottom: 32px;
 }
 
@@ -92,7 +135,7 @@ main .cards img {
 }
 
 main .card h1 {
-  font-family: formular-medium;
+  font-family: Formular;
   margin-top: 10px;
   font-size: 24px;
   line-height: 41px;
@@ -102,7 +145,7 @@ main .card h1 {
 main .card h3 {
   margin: 0 0;
 
-  font-family: formular-medium;
+  font-family: Formular;
 
   font-weight: bold;
   font-size: 20px;
@@ -114,14 +157,14 @@ main .card h3 {
 main .card p {
   font-size: 14px;
   line-height: 26px;
-  font-family: formular-mono;
+  font-family: Formular Mono;
   color: #6c6c80;
 }
 
 main .card span {
   font-size: 14px;
   line-height: 26px;
-  font-family: formular-medium;
+  font-family: Formular;
   color: #008f54;
 }
 
@@ -158,20 +201,20 @@ footer {
 .footer-results h1 {
   padding-top: 20px;
   font-size: 30px;
-  font-family: formular-medium;
+  font-family: Formular;
   color: black;
 }
 
 .footer-results h2 {
   font-size: 17px;
-  font-family: formular-mono;
+  font-family: Formular Mono;
   color: black;
 }
 
 .footer-results a {
   padding-top: 30px;
   font-size: 20px;
-  font-family: formular-mono;
+  font-family: Formular Mono;
   color: #8d8d8d;
   text-decoration: underline;
 }

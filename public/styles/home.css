@@ -1,21 +1,55 @@
 @font-face {
-  src: url(fonts/formular-medium.otf);
-  font-family: "formular-medium";
+  font-family: "Formular";
+  src: url("fonts/Formular-Bold.woff2") format("woff2"),
+    url("fonts/Formular-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/UnicaOne-Regular.ttf);
-  font-family: "UnicaOne-Regular";
+  font-family: "Formular Mono";
+  src: url("fonts/FormularMono.woff2") format("woff2"),
+    url("fonts/FormularMono.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/formular-mono.otf);
-  font-family: "formular-mono";
+  font-family: "Formular";
+  src: url("fonts/Formular-Medium.woff2") format("woff2"),
+    url("fonts/Formular-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(fonts/Patrima-Outline.otf);
-  font-family: "Patrima-Outline";
+  font-family: "Unica One";
+  src: url("fonts/UnicaOne-Regular.woff2") format("woff2"),
+    url("fonts/UnicaOne-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ZIGZAG";
+  src: url("fonts/ZIGZAG-NotRounded.woff2") format("woff2"),
+    url("fonts/ZIGZAG-NotRounded.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patrima Outline";
+  src: url("fonts/Patrima-Outline.woff2") format("woff2"),
+    url("fonts/Patrima-Outline.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /*
@@ -107,11 +141,15 @@ body {
 .top-bar {
   margin-top: 30px;
   margin-bottom: 20px;
-  font-family: "UnicaOne-Regular";
+  font-family: "Unica One";
   font-size: 20px;
   width: 100%;
   height: 80px;
   line-height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .top-bar-mobile {
@@ -256,7 +294,7 @@ li {
 }
 .img_menu a {
   width: 220px;
-  font-family: "Patrima-Outline";
+  font-family: "Patrima Outline";
   font-size: 24px;
   display: inline-block;
   color: black;
@@ -285,9 +323,33 @@ li {
 }
 
 .azulejo ul {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row nowrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 1400px) {
+  .azulejo ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1100px) {
+  .azulejo ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 880px) {
+  .azulejo ul {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.azulejo li {
+  margin-bottom: 30px;
 }
 
 .social {
@@ -303,7 +365,7 @@ li {
 
 .social a {
   font-size: 12px;
-  font-family: formular-mono !important;
+  font-family: Formular Mono !important;
   color: #8d8d8d;
 }
 
@@ -354,10 +416,6 @@ li {
     padding-right: 20%;
   }
 
-  .azulejo ul {
-    flex-flow: row wrap;
-  }
-
   .azulejo ul li {
     padding-top: 30px;
   }
@@ -371,7 +429,7 @@ li {
   }
 
   .mobile-header {
-    font-family: "UnicaOne-Regular";
+    font-family: "Unica One";
     font-size: 125%;
 
     line-height: 60px;
@@ -394,7 +452,7 @@ li {
   .top-bar-mobile {
     display: inline-block;
     border-top: 1px solid;
-    font-family: "UnicaOne-Regular";
+    font-family: "Unica One";
     font-size: 130%;
     line-height: 60px;
     padding-bottom: 10%;
@@ -456,7 +514,7 @@ li {
 .titulo {
   font-size: 640%;
   text-transform: uppercase;
-  font-family: formular-medium !important;
+  font-family: Formular !important;
   margin: 100px;
   color: Black;
 }
@@ -471,7 +529,7 @@ li {
 
 .social a {
   font-size: 16px;
-  font-family: formular-mono !important;
+  font-family: Formular Mono !important;
   color: #8d8d8d;
   text-decoration: underline;
 }
@@ -485,7 +543,7 @@ li {
 .btn-top {
   padding-top: 10px;
   padding-left: 200px;
-  font-family: formular-medium !important;
+  font-family: Formular !important;
   font-size: 15px;
   width: 300px;
 }
@@ -499,7 +557,7 @@ li {
 #page-home span {
   padding-top: 300px;
   width: 300px;
-  font-family: formular-medium !important;
+  font-family: Formular !important;
   font-size: 25px !important;
   text-align: right !important;
   align-content: right !important;
@@ -560,7 +618,7 @@ li {
   .titulo {
     font-size: 240%;
     text-transform: uppercase;
-    font-family: formular-medium !important;
+    font-family: Formular !important;
     margin: 50px;
   }
 
@@ -570,14 +628,14 @@ li {
     font-size: 20px;
     width: 100%;
     text-align: right;
-    font-family: formular-medium !important;
+    font-family: Formular !important;
   }
 
   #page-home span {
     padding-top: 20px;
     width: 100%;
     padding-right: 100px;
-    font-family: formular-medium !important;
+    font-family: Formular !important;
     font-size: 20px !important;
     text-align: right !important;
     align-content: right !important;

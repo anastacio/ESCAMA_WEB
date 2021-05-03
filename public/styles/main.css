@@ -9,21 +9,57 @@ posicionamento, alinhamento
 }
 
 @font-face {
-  src: url(../fonts/formular-medium.otf);
-  font-family: "formular-medium";
-  font-weight: medium;
+  font-family: "Formular";
+  src: url("../fonts/Formular-Bold.woff2") format("woff2"),
+    url("../fonts/Formular-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(../fonts/formular-mono.otf);
-  font-family: "formular-mono";
+  font-family: "Formular Mono";
+  src: url("../fonts/FormularMono.woff2") format("woff2"),
+    url("../fonts/FormularMono.woff") format("woff");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  src: url(../fonts/zigzag.otf);
-  font-family: "zigzag";
+  font-family: "Formular";
+  src: url("../fonts/Formular-Medium.woff2") format("woff2"),
+    url("../fonts/Formular-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Unica One";
+  src: url("../fonts/UnicaOne-Regular.woff2") format("woff2"),
+    url("../fonts/UnicaOne-Regular.woff") format("woff");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ZIGZAG";
+  src: url("../fonts/ZIGZAG-NotRounded.woff2") format("woff2"),
+    url("../fonts/ZIGZAG-NotRounded.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Patrima Outline";
+  src: url("../fonts/Patrima-Outline.woff2") format("woff2"),
+    url("../fonts/Patrima-Outline.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
