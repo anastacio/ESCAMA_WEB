@@ -118,8 +118,61 @@
 /* MENU ESCAMA */
 
 .content {
-  margin-left: 14%;
-  margin-right: 14%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 100px;
+}
+
+.inner-content {
+  width: 87%;
+  max-width: 1200px;
+}
+
+@media (max-width: 1250px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 70px;
+  }
+
+  .inner-content {
+    width: 90%;
+    max-width: 1300px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 65px;
+  }
+
+  .inner-content {
+    width: 100%;
+    max-width: 1300px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 65px;
+  }
+
+  .inner-content {
+    width: 100%;
+    max-width: 1300px;
+  }
 }
 
 .content a {
@@ -130,6 +183,7 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
 body {
   margin: 0;
   width: 100%;
@@ -138,6 +192,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .top-bar {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -162,11 +217,7 @@ body {
 
 .hamburger {
   background: none;
-  position: absolute;
-  top: 0;
-  right: 0;
   line-height: 45px;
-  padding: 30px 200px 0px 15px;
   color: #999;
   border: 0;
   font-size: 1.4em;
@@ -175,12 +226,9 @@ body {
   outline: none;
   z-index: 10000000000000;
 }
+
 .cross {
   background: none;
-  position: absolute;
-  top: 0px;
-  right: 0;
-  padding: 30px 200px 0px 15px;
   color: #999;
   border: 0;
   font-size: 3em;
@@ -189,6 +237,7 @@ body {
   cursor: pointer;
   outline: none;
   z-index: 10000000000000;
+  transform: translateY(10px);
 }
 
 .logo_escama {
@@ -197,8 +246,7 @@ body {
 }
 
 .logo_aumentada {
-  width: 12%;
-  height: 60%;
+  width: 24%;
 }
 
 .menu {
@@ -296,15 +344,27 @@ li {
   width: 220px;
   font-family: "Patrima Outline";
   font-size: 24px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: black;
 }
 
+.img_menu strong {
+  text-align: center;
+}
+
+.ilustration {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  padding: 0px 180px;
+}
+
 #imgAR {
-  padding-bottom: 15px;
-  margin-left: 850px;
-  width: 9%;
-  height: 9%;
+  align-items: flex-end;
+  width: 80px;
 }
 
 #seta1 {
@@ -318,43 +378,76 @@ li {
   height: 30%;
 }
 
-#about {
-  padding-left: 35%;
-}
-
 .azulejo ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-@media (max-width: 1400px) {
-  .azulejo ul {
-    display: grid;
+@media (max-width: 1350px) {
+  .img_menu a {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .img_menu a {
+    width: 180px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .img_menu a {
+    width: 180px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .azulejo li {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+  }
+
+  .azulejo-wrapper {
+    display: grid !important;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center !important;
+    align-items: center;
   }
 }
 
-@media (max-width: 1100px) {
-  .azulejo ul {
-    display: grid;
+@media (max-width: 750px) {
+  .azulejo li {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+  }
+
+  .azulejo-wrapper {
+    display: grid !important;
     grid-template-columns: 1fr 1fr;
+    justify-content: center !important;
+    align-items: center;
   }
 }
 
-@media (max-width: 880px) {
-  .azulejo ul {
-    display: grid;
+@media (max-width: 550px) {
+  .azulejo li {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+  }
+
+  .azulejo-wrapper {
+    display: grid !important;
     grid-template-columns: 1fr;
+    justify-content: center !important;
+    align-items: center;
   }
-}
-
-.azulejo li {
-  margin-bottom: 30px;
-}
-
-.social {
-  margin-top: 60px;
-  color: #8d8d8d;
 }
 
 .social ul {
@@ -384,6 +477,11 @@ li {
   height: 65%;
 }
 
+.social ul {
+  margin-top: 100px;
+  justify-content: center;
+}
+
 /* FIM WEB ESCAMA */
 
 /* Mobile */
@@ -409,11 +507,6 @@ li {
 
   body {
     background-color: rgba(245, 244, 240);
-  }
-
-  .main-content {
-    padding-left: 15%;
-    padding-right: 20%;
   }
 
   .azulejo ul li {
@@ -475,28 +568,53 @@ li {
   #insta {
     padding-top: 3%;
     margin-left: 31%;
-    width: 20%;
-    height: 56%;
+    width: 40px;
   }
 
   #dgartes {
     padding-top: 3%;
     width: 103%;
-    height: 62%;
+    max-width: 400px;
+    margin-bottom: 30px;
   }
 
   #gplay {
-    width: 75%;
-    height: 75%;
+    max-width: 200px;
   }
 
   .social ul {
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
+    align-items: center;
   }
 
   .social ul li {
     padding-top: 10%;
+    text-align: center;
+  }
+
+  .social ul {
+    margin-top: 0px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .social ul {
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+
+  .social-itens p {
+    text-align: center;
+  }
+
+  .social-itens li {
+    text-align: center;
+  }
+
+  .social-itens img {
+    margin: 0 !important;
   }
 }
 
