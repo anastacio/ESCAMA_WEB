@@ -450,10 +450,21 @@ li {
   }
 }
 
-.social ul {
+.social-items {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  flex-flow: row nowrap;
+  margin-top: 100px;
+}
+
+.social .partner {
+  width: 350px;
+}
+
+.social-items .left-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .social a {
@@ -468,18 +479,12 @@ li {
 }
 
 #dgartes {
-  width: 106%;
-  height: 46%;
+  width: 100%;
 }
 
 #gplay {
   width: 65%;
   height: 65%;
-}
-
-.social ul {
-  margin-top: 100px;
-  justify-content: center;
 }
 
 /* FIM WEB ESCAMA */
@@ -556,6 +561,32 @@ li {
     height: 40%;
   }
 
+  .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+
+  .social-items .left-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .logo_escama {
     width: 18%;
     height: 45%;
@@ -567,14 +598,12 @@ li {
 
   #insta {
     padding-top: 3%;
-    margin-left: 31%;
     width: 40px;
   }
 
   #dgartes {
     padding-top: 3%;
-    width: 103%;
-    max-width: 400px;
+    width: 100%;
     margin-bottom: 30px;
   }
 
@@ -582,38 +611,27 @@ li {
     max-width: 200px;
   }
 
-  .social ul {
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .social ul li {
+  .social-items div {
     padding-top: 10%;
     text-align: center;
   }
 
-  .social ul {
+  .social-items {
     margin-top: 0px;
     justify-content: center;
   }
 }
 
 @media (max-width: 600px) {
-  .social ul {
-    flex-flow: column wrap;
-    justify-content: space-between;
-  }
-
-  .social-itens p {
+  .social-items p {
     text-align: center;
   }
 
-  .social-itens li {
+  .social-items li {
     text-align: center;
   }
 
-  .social-itens img {
+  .social-items img {
     margin: 0 !important;
   }
 }
@@ -666,7 +684,7 @@ li {
   width: 300px;
 }
 
-.social-itens li {
+.social-items li {
   display: inline;
   padding-left: 5%;
 }
@@ -714,7 +732,7 @@ li {
     margin-left: 60px;
   }
 
-  .social-itens-mobile li {
+  .social-items-mobile li {
     display: inline-flex;
     padding-top: 10px;
     padding-left: 5%;

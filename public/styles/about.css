@@ -171,12 +171,21 @@
   color: #8d8d8d;
 }
 
-.social ul {
+.social-items {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  flex-flow: row nowrap;
+  margin-top: 100px;
+}
 
-  list-style-type: none;
+.social .partner {
+  width: 350px;
+}
+
+.social-items .left-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .social a {
@@ -184,7 +193,6 @@
   font-family: Formular Mono !important;
   color: #8d8d8d;
 }
-
 #insta {
   padding-top: 3%;
   width: 20%;
@@ -193,8 +201,7 @@
 
 #dgartes {
   padding-top: 3%;
-  width: 103%;
-  height: 62%;
+  width: 100%;
 }
 
 #gplay {
@@ -237,15 +244,13 @@
   }
 
   #insta {
-    margin-left: 31%;
     width: 20%;
     height: 56%;
   }
 
   #dgartes {
     padding-top: 3%;
-    width: 103%;
-    height: 62%;
+    width: 100%;
   }
 
   #gplay {
@@ -253,12 +258,51 @@
     height: 75%;
   }
 
-  .social ul {
-    flex-flow: row wrap;
+  .social {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
-  .social ul li {
-    padding-top: 10%;
+  .social .partner {
+    margin-top: 20px;
+  }
+
+  .social-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+
+  .social-items p {
+    text-align: center;
+  }
+
+  .social-items .left-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-items a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partner a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 }

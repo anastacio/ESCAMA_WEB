@@ -21,7 +21,7 @@
   #page-create-point header,
   #page-search-results header {
     flex-wrap: wrap;
-    justify-content: center;
+    color: #342374;
   }
   /*
   header a {
@@ -111,32 +111,14 @@
     font-size: 20px;
   }
 
-  #page-search-results header a {
-    display: none;
-  }
-
-  #page-search-results header a span {
-    display: none;
-  }
-
-  #page-search-results header .voltar {
-    margin: 16px;
-    background-image: url("../assets/seta_branca.png");
-    padding-right: 20px;
-    display: flex; /*dentro da mesma div vc coloca o display flex pra fazer flexbox*/
-    width: 10px;
-    height: 22px;
-  }
-
-  #page-search-results header img {
-    padding-right: 70px;
-    width: 250px;
-  }
-
   #page-search-results main h4 {
     padding-top: 0px;
     padding-bottom: 10px;
     font-size: 20px;
+  }
+
+  #page-search-results header {
+    margin: 48px;
   }
 
   #page-search-results .footer-results {
@@ -146,25 +128,24 @@
   }
 
   #page-search-results .footer-img {
-    margin: 40px;
     width: 100%;
     height: 100%;
   }
 
   #footer-tile {
-    max-width: 300px;
+    max-width: 200px;
   }
 
   #page-search-results .footer-txt h1 {
-    font-size: 100%;
-  }
-
-  #page-search-results .footer-txt h2 {
     font-size: 90%;
   }
 
+  #page-search-results .footer-txt h2 {
+    font-size: 70%;
+  }
+
   #page-search-results .footer-txt a {
-    font-size: 100%;
+    font-size: 90%;
   }
 }
 /*

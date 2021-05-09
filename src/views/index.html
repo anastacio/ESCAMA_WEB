@@ -52,7 +52,7 @@
                         <li>cadastre azulejos</li>
                     </a>
                     <span class="btn-bottom2">
-                        <a href="search-results">
+                        <a href="#">
                             <li>encontre azulejos</li>
                         </a>
                     </span>
@@ -135,7 +135,7 @@
                             </li>
                             <li>
                                 <span class="img_menu btn-bottom">
-                                    <a href="search-results">
+                                    <a href="#">
                                         <img alt="seta" id="img_main" src="assets/azulejo004.png"/>
                                         <strong>
                                             <span>encontre azulejos</span>
@@ -150,32 +150,34 @@
             </div>
 
             <div class="social">
-                <ul class="social-itens">
-                    <li>
-                        <a href="https://play.google.com/store/apps/details?id=com.anastacio.escama" target="_blank">
-                            <p>disponível em</p>
-                            <img alt="seta" id="gplay" src="assets/gplay.png"/>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="hhttps://www.instagram.com/escamaapp/" target="_blank">
-                            <p>social</p>
-                            <img alt="seta" id="insta" src="assets/insta.png"/>
-                        </a>
-                    </li>
-                    <li>
+                <div class="social-items">
+                    <div class="left-items">
+                        <div>
+                            <a href="https://play.google.com/store/apps/details?id=com.anastacio.escama" target="_blank">
+                                <p>disponível em</p>
+                                <img alt="seta" id="gplay" src="assets/gplay.png"/>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="hhttps://www.instagram.com/escamaapp/" target="_blank">
+                                <p>social</p>
+                                <img alt="seta" id="insta" src="assets/insta.png"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="partner">
                         <a href="https://www.dgartes.gov.pt/" target="_blank">
                             <p>parceiro institucional</p>
                             <img alt="seta" id="dgartes" src="assets/dgartes.png"/>
                         </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
             <!--
 
         <div class="social-mobile">
-          <ul class="social-itens-mobile">
+          <ul class="social-items-mobile">
             <li class="social-mobile-agenda">
               <a href="https://www.youtube.com/watch?v=S1qD46KsURA" target="_blank" class="agenda">Conheça a Agenda 2030</a>
             </li>
@@ -228,7 +230,7 @@
 
         
         <div class="social-mobile">
-          <ul class="social-itens">
+          <ul class="social-items">
             <li>
               <a href="https://nacoesunidas.org/tema/agenda2030/" class="agenda"
                 >Conheça a Agenda 2030</a
@@ -269,7 +271,7 @@
     </body>
 {% endblock content %}
 {% block modal %}
-    {% include "partials/modal.html" %}
+{% include "partials/modal.html" %}
 {%endblock modal %}
 {% block scripts %}
 

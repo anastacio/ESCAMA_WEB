@@ -94,18 +94,20 @@ server.get("/search-results", async (req, res) => {
   }
 
   try {
-    let query = "SELECT * FROM tiles";
-    // let query = "SELECT * FROM tiles WHERE";
+    let query = "SELECT * FROM tiles WHERE";
 
-    // if (typeof req.query.search === "object" && req.query.search.length > 1) {
-    //   search.map((item, index) => {
-    //     index > 0 ? (query += " OR ") : null;
-    //     query += ` regions LIKE '%${item}%'`;
-    //   });
-    // } else {
-    //   query += ` regions LIKE '%${search}%'`;
-    // }
+    if (typeof req.query.search === "object" && req.query.search.length > 1) {
+      search.map((item, index) => {
+        index > 0 ? (query += " OR ") : null;
+        query += ` regions LIKE '%${item}%'`;
+      });
+    } else {
+      query += ` regions LIKE '%${search}%'`;
+    }
 
+    if (!search) {
+      query = "SELECT * FROM tiles";
+    }
     const result = await db.query(query);
 
     const { rows } = result;

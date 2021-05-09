@@ -58,44 +58,18 @@
                 <br />
                 <p>
 
-            <!--
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Idade:</span>&nbsp;&nbsp;{{ place.idade }}
-                </p>
-                <br />
-                <p>
-                    <span>Data da imaginação:</span>&nbsp;&nbsp;{{ place.data}}
-                </p>
-                <br />
-                
-                            <p>
-                                
-                                    {{ place.city }},
-                                    {{ place.state }}
-                             
-                            </p>
-            -->
-            
                 <div class="map map-home leaflet-container leaflet-fade-anim leaflet-grab leaflet-touch-drag"
                     id="map{{ loop.index }}" style="height: 200px; margin-top: 50px;"></div>
             </div>
             {% endfor %}
-
-
-
         </div>
-
 
         {%else%}
 
         <h4>
             <strong>Nenhum</strong>
             local encontrado</h4>
-
-
-
         {% endif %}
-
-
     </body>
 
 </main>
@@ -123,12 +97,7 @@
 </footer>
 <script type="text/javascript">
 
-
-
-
     const cardsElements = document.getElementsByClassName('card');
-
-
 
     Object.values(cardsElements).map(function (item, index) {
         var latitude = document.getElementById("la" + (index + 1)).innerText;
@@ -136,10 +105,6 @@
         var map = L.map("map" + (index + 1)).setView([
             latitude, longitude
         ], 13);
-
-
-
-
 
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors" }).addTo(map);
 
