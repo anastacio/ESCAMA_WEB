@@ -61,12 +61,11 @@
 }
 
 #page-create-point header {
-  margin-top: 48px;
-  margin-left: 5.5%;
-  margin-right: 6.5%;
+  margin: 48px auto 0px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 980px;
 }
 
 #page-create-point header a {
@@ -289,9 +288,8 @@ form button:hover {
 }
 
 .create-point-head {
-  padding-top: 40px;
-  padding-left: 5.4%;
-  padding-right: 4.4%;
+  margin: 40px auto;
+  max-width: 980px;
 }
 
 .create-point-head h1 {
@@ -306,6 +304,7 @@ form button:hover {
   font-size: 120%;
   font-family: "Unica One";
   color: #3f496b;
+  text-align: justify;
 }
 
 .create-point-head h3 {

@@ -63,7 +63,7 @@
 #page-about header {
   margin-top: 48px;
   padding-left: 30px;
-  padding-right: 60px;
+  padding-right: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,8 +101,7 @@
 }
 
 .create-point-head {
-  padding-top: 40px;
-  padding-left: 30px;
+  padding: 40px 30px;
 }
 
 .create-point-head h1 {
@@ -117,6 +116,7 @@
   font-size: 120%;
   font-family: "Unica One";
   color: #3f496b;
+  text-align: justify;
 }
 
 .create-point-head h3 {
@@ -149,18 +149,16 @@
   color: #342374;
 }
 
-.telas-app ul {
+.telas-app {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
   justify-content: space-between;
-  list-style-type: none;
+  flex-wrap: wrap;
 }
 
-.telas-app ul li img {
+.telas-app img {
   margin-top: 60px;
   margin-bottom: 60px;
-  width: 75%;
-  height: 65%;
 }
 
 .social {
@@ -210,12 +208,6 @@
 }
 
 @media (max-width: 900px) {
-  #page-about header {
-    padding-left: 30px;
-
-    padding-right: 10px;
-  }
-
   #page-about header a {
     padding-left: 10px;
     font-size: 110%;
